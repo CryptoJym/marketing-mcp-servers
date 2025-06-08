@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "social-media-mcp"
+version = "0.1.0"
+description = "MCP server for multi-platform social media management"
+readme = "README.md"
+authors = [
+    {name = "James Brady", email = "james@promax.digital"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "mcp>=0.9.0",
+    "httpx>=0.24.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "tweepy>=4.0.0",
+    "python-linkedin-api>=2.0.0",
+    "instagrapi>=2.0.0",
+    "facebook-sdk>=3.1.0",
+    "tiktokapipy>=0.2.0",
+    "schedule>=1.2.0",
+    "pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+social-media-mcp = "social_media_mcp.__main__:main"
